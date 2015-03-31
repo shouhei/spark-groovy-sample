@@ -1,0 +1,17 @@
+apply plugin: 'groovy'
+apply plugin: 'application'
+
+mainClassName = 'ExampleService' // パッケージ名も必要に応じて指定 foo.bar.ExampleService等
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.3'
+
+    testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
+    testCompile 'junit:junit:4.12'
+
+    compile 'com.sparkjava:spark-core:2.1'
+}
